@@ -1,0 +1,20 @@
+/* Visit https://aka.ms/tsconfig to read more about this file */
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",                              
+    "esModuleInterop": true,                            
+    "forceConsistentCasingInFileNames": true,          
+    "strict": true,                                     
+    "moduleResolution": "Node",
+    "composite": true,
+    "traceResolution": true,
+    "baseUrl": ".",
+    "paths": {
+      //maps AWS lambda layers folder to the local layers folder
+      // needs to map every single layer you are using
+      "/opt/nodejs/*": ["src/layers/util-layer"],
+      
+    },
+  }
+}
